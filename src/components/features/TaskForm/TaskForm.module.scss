@@ -1,0 +1,47 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  @include flex(column, center, center);
+  margin-top: 30px;
+
+  .spinner {
+    text-align: center;
+    margin: 100px 0;
+  }
+
+  .error {
+    margin-left: 20px;
+    color: $warning;
+    font-size: $base-size;
+  }
+
+  .form {
+    width: 576px;
+    padding: 30px 30px;
+    @include flex(column, center, center);
+    background: $light;
+    border-radius: 3%;
+    font-size: 15px;
+    font-weight: 600;
+
+    .buttons {
+      margin: 20px 0;
+      @include flex(row, center, center);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .root {
+    .form {
+      width: 375px;
+      padding-top: 30px;
+      .buttons {
+        flex-direction: column;
+        .button {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

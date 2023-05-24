@@ -1,0 +1,8 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  @include height();
+  color: black;
+  background-color: aliceblue;
+  padding-left: 60px;
+}

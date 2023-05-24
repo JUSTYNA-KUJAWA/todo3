@@ -1,0 +1,41 @@
+@import "settings.scss";
+@import "typography.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $base-font-family;
+  margin: 0;
+  padding: 0;
+  color: black;
+  background: $base-background-color;
+  line-height: 1.7;
+  overflow-y: scroll;
+  min-height: 100vh;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+//RWD//
+$max-tablet-width: 1024px;
+$min-tablet-width: 577px;
+$max-mobile-width: 576px;
+
+@mixin tablet {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $max-mobile-width) {
+    @content;
+  }
+}

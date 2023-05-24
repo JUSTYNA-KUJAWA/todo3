@@ -1,0 +1,18 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    align-items: center;
+    padding-top: 20px;
+    background-color: aliceblue;
+    padding-bottom: 10px;
+    text-align: center;
+    .link{
+        float:left;
+        margin-left: 25px;
+    }
+    h3{
+        align-items: center;
+        margin-left: 15px;
+        margin-top: 0px;
+    }
+}

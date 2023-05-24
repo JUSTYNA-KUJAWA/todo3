@@ -1,0 +1,30 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  height: 400px;
+  @include flex(column, center, center);
+  background-image: url('/images/pexels-andrea-piacquadio-3761509.jpg');
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.root::after {
+  content: ""; // ::before and ::after both require content
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(150deg, $primary-light, $primary-dark);
+  opacity: .7;
+  z-index: 1;
+}
+
+.root > * {
+  z-index: 100;
+}
+
+
+
+

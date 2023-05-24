@@ -1,22 +1,16 @@
 const mongoose = require("mongoose");
 
 const taskSchema = new mongoose.Schema({
-  mail: {
-    type: String,
-    required: true,
-    match: [
-      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-      "Please enter a valid email address",
-    ],
-  },
   created: { type: Date, required: true },
-  updated: { type: Date },
-  status: { type: String, required: true },
+  updated: { type: Date, required: true },
+  datemax: { type: Date, required: true },
+  status: { type: Number, required: true },
   title: { type: String, required: true },
   text: { type: String, required: true },
-  category: { type: String },
-  priority: { type: String },
-  nickname: { type: String },
+  category: { type: String, required: true },
+  priority: { type: Number, required: true },
+  createdby: { type: Object, required: true },
+  users: { type: Array, required: true },
 });
 
 module.exports = mongoose.model("Task", taskSchema);

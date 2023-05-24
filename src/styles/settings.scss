@@ -1,0 +1,40 @@
+// Sizes:
+$base-size: 16px;
+
+// Colors:
+$main: #4381C1;
+$light: #ffffff;
+$dark: #4e4b5c;
+$primary-light: #bdadea;
+$primary-dark: #bea2c2;
+$secondary-dark: #ac7871;
+$secondary-light: #B8B7B8;
+$warning: #c22149;
+$base-size: 12px;
+$base-font-color: #708090;
+$base-background-color: #2f4f4f;
+$base-black: #0000;
+$base-light-color: #a9a9a9;
+$base-font-family: 'Roboto', sans-serif;
+$color-violet: #a29bfe;
+$color-blue: #0E0E0E;
+$color-red: #d63031;
+$color-dark-green: #4cb430;
+$color-white: #f3f3f3;
+$font-logo: 'Oswald', sans-serif;
+$font-main: 'Arial', serif;
+$color-green: linear-gradient(to right, #4cb430, rgb(37, 119, 7));
+
+$base-size: 12px;
+$main-spacing: 12px;
+
+@mixin flex($flex-direction, $align-items, $justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin height(){
+  min-height: 100vh;
+}
